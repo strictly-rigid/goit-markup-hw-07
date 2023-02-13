@@ -1,2 +1,2 @@
-# goit-markup-hw-05
-HTML/CSS module HW5
+# goit-markup-hw-07
+HTML/CSS module HW7
