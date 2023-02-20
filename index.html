@@ -60,7 +60,7 @@
 
       <div class="mobile-menu" data-menu>
         <button type="button" class="mobile-menu-close" data-menu-close>
-          <svg width="8" height="8">
+          <svg class="modal-close-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close-modal"></use>
           </svg>
         </button>
@@ -78,19 +78,19 @@
           </ul>
           <address class="address-modal">
             <ul class="contact-info list">
-              <li class="menu-item">
+              <li class="menu-item mobile-number">
                 <a class="contact-number link" href="tel:+110001111111"
                   >+11 (000) 111-11-11</a
                 >
               </li>
-              <li class="menu-item">
+              <li class="menu-item mobile-mail">
                 <a class="contact-mail link" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
                 >
               </li>
             </ul>
           </address>
-          <ul class="social-list list">
+          <ul class="social-list mobile-social-list list">
             <li class="social-list-item">
               <a href="" class="social-list-link">
                 <svg class="social-list-icon" width="24" height="24">
@@ -135,7 +135,7 @@
         </div>
       </section>
       <!--Our advantages-->
-      <!-- <section class="section-advantages">
+      <section class="section-advantages">
         <div class="container">
           <h2 class="hidden-heading">Our advantages</h2>
 
@@ -190,43 +190,64 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- What Are We Doing-->
-      <!-- <section class="section section-doing">
+      <section class="section section-doing">
         <div class="container">
           <h2 class="section-title">What are we doing</h2>
           <ul class="list doing-list">
             <li class="doing-item">
               <img
-                src="./images/do-1.jpg"
+                srcset="
+                  ./images/monitor.jpg    1x,
+                  ./images/monitor@2x.jpg 2x,
+                  ./images/monitor@3x.jpg 3x
+                "
+                src="./images/monitor.jpg"
                 alt="monitor"
                 width="360"
                 height="300" />
             </li>
             <li class="doing-item">
               <img
-                src="./images/do-2.jpg"
+                srcset="
+                  ./images/cellphone.jpg    1x,
+                  ./images/cellphone@2x.jpg 2x,
+                  ./images/cellphone@3x.jpg 3x
+                "
+                src="./images/cellphone.jpg"
                 alt="cellphone"
                 width="360"
                 height="300" />
             </li>
             <li class="doing-item">
               <img
-                src="./images/do-3.jpg"
+                srcset="
+                  ./images/phone-laptop.jpg    1x,
+                  ./images/phone-laptop@2x.jpg 2x,
+                  ./images/phone-laptop@3x.jpg 3x
+                "
+                src="./images/phone-laptop.jpg"
                 alt="cellphone and laptop"
                 width="360"
                 height="300" />
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
+
       <!-- Our Team-->
-      <!-- <section class="section section-team">
+      <section class="section section-team">
         <div class="container">
           <h2 class="section-title">Our Team</h2>
           <ul class="list team-list">
             <li class="team-item">
               <img
+                srcset="
+                  ./images/mark-guerrero.jpg    1x,
+                  ./images/mark-guerrero@2x.jpg 2x,
+                  ./images/mark-guerrero@3x.jpg 3x
+                "
                 src="./images/mark-guerrero.jpg"
                 alt="Product Designer"
                 width="264"
@@ -268,6 +289,11 @@
             </li>
             <li class="team-item">
               <img
+                srcset="
+                  ./images/tom-ford.jpg    1x,
+                  ./images/tom-ford@2x.jpg 2x,
+                  ./images/tom-ford@3x.jpg 3x
+                "
                 src="./images/tom-ford.jpg"
                 alt="Frontend Developer"
                 width="264"
@@ -309,6 +335,11 @@
             </li>
             <li class="team-item">
               <img
+                srcset="
+                  ./images/camila-garcia.jpg    1x,
+                  ./images/camila-garcia@2x.jpg 2x,
+                  ./images/camila-garcia@3x.jpg 3x
+                "
                 src="./images/camila-garcia.jpg"
                 alt="Marketing Specialist"
                 width="264"
@@ -350,6 +381,11 @@
             </li>
             <li class="team-item">
               <img
+                srcset="
+                  ./images/daniel-wilson.jpg    1x,
+                  ./images/daniel-wilson@2x.jpg 2x,
+                  ./images/daniel-wilson@3x.jpg 3x
+                "
                 src="./images/daniel-wilson.jpg"
                 alt="UI Designer"
                 width="264"
@@ -391,10 +427,10 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Customers -->
-      <!-- <section class="section section-customers">
+      <section class="section section-customers">
         <div class="container">
           <h2 class="section-title customers-title">Customers</h2>
           <ul class="customers-list">
@@ -442,10 +478,10 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
     <!-- Footer -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer-general">
         <div>
           <a class="link name-footer" href="./index.html"
@@ -512,8 +548,8 @@
             </button>
           </form>
         </div>
-      </div> -->
-    <!-- </footer> -->
+      </div>
+    </footer>
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
