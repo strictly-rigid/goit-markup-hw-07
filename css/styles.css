@@ -53,7 +53,7 @@ button {
 
 .container {
   width: 100%;
-  padding: 0 16px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -320,7 +320,7 @@ button {
 }
 
 .footer-email {
-  width: 398px;
+  width: 100%;
   height: 40px;
   padding-left: 16px;
   color: rgba(255, 255, 255, 0.6);
@@ -363,9 +363,15 @@ button {
 
 /* ================HEADER MOBILE================ */
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 427px) {
   .container {
-    width: 480px;
+    width: 320px;
+  }
+}
+
+@media screen and (min-width: 428px) {
+  .container {
+    width: 428px;
   }
 }
 
@@ -375,7 +381,7 @@ button {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .container {
     width: 1158px;
   }
@@ -448,8 +454,227 @@ button {
   }
 } */
 
-/* ================480-... styles================ */
-@media screen and (min-width: 480px) {
+/* ================320-427 styles================ */
+@media screen and (min-width: 320px) and (max-width: 427px) {
+  .container {
+    width: 320px;
+  }
+
+  .page-header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  address {
+    display: none;
+  }
+
+  .address-modal {
+    display: block;
+    font-style: normal;
+  }
+
+  .mobile-menu-open {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-height: 796px;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+
+    background-color: var(--background-color);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .mobile-menu-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .mobile-menu-item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .mobile-menu-container {
+    position: relative;
+
+    padding-top: 80px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+  }
+
+  .mobile-menu-close {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: var(--accent-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-menu-close:is(:hover, :focus) {
+    background-color: var(--pressed-state-color);
+  }
+
+  .modal-close-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-menu-close:hover .modal-close-icon {
+    fill: var(--background-color);
+  }
+
+  .contact-number {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    text-decoration: none;
+
+    color: var(--body-text-color);
+  }
+
+  .contact-mail {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--body-text-color);
+  }
+
+  .contact-number:is(:hover, :focus),
+  .contact-mail:is(:hover, :focus) {
+    color: var(--primary-brand-color);
+  }
+
+  .mobile-menu-list {
+    margin-bottom: auto;
+  }
+
+  .mobile-number {
+    margin-bottom: 40px;
+  }
+
+  .mobile-mail {
+    margin-bottom: 48px;
+  }
+
+  .modal-link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--headings-herobackground-color);
+  }
+
+  .modal-link:is(:hover, :focus) {
+    color: var(--pressed-state-color);
+  }
+
+  .modal-link.current {
+    color: var(--primary-brand-color);
+  }
+
+  .main-heading {
+    width: 100%;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .advantages-logo {
+    display: none;
+  }
+
+  .advantages-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
+
+  .section-team {
+    padding-top: 96px;
+    padding-bottom: 128px;
+  }
+
+  .team-item {
+    margin: 0 auto;
+  }
+
+  .team-list .team-item + .team-item {
+    margin-top: 72px;
+  }
+
+  .customers-link {
+    margin: 0 auto;
+  }
+
+  .customers-list .customers-item + .customers-item {
+    margin-top: 72px;
+  }
+
+  .footer {
+    padding-top: 96px;
+    padding-bottom: 104px;
+  }
+
+  .text-footer {
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .footer-general {
+    text-align: center;
+  }
+
+  .text-footer,
+  .social-media-footer > .social-list {
+    margin-bottom: 72px;
+  }
+
+  .btn-subscribe {
+    margin-top: 16px;
+  }
+}
+
+/* ================428-... styles================ */
+@media screen and (min-width: 428px) {
   .menu {
     display: none;
   }
@@ -539,12 +764,20 @@ button {
     color: var(--primary-brand-color);
   }
 
+  .mobile-menu-list {
+    margin-bottom: auto;
+  }
+
   .mobile-menu-content > .social-list {
     margin-right: 60px;
   }
 
   .mobile-social-list .social-list-item + .social-list-item {
     margin-left: 56px;
+  }
+
+  .mobile-social-list {
+    margin-bottom: 40px;
   }
 
   .modal-link {
@@ -561,6 +794,10 @@ button {
     color: var(--pressed-state-color);
   }
 
+  .modal-link.current {
+    color: var(--primary-brand-color);
+  }
+
   .address-modal {
     display: block;
     font-style: normal;
@@ -569,16 +806,11 @@ button {
   .mobile-menu-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: stretch;
+    height: 100%;
   }
 
   .mobile-menu-item:not(:last-child) {
     margin-bottom: 40px;
-  }
-
-  .mobile-menu-item:last-child {
-    margin-bottom: 284px;
   }
 
   .advantages-logo {
@@ -588,10 +820,6 @@ button {
   .section-team {
     padding-top: 96px;
     padding-bottom: 128px;
-  }
-
-  .team-item {
-    margin: 0 auto;
   }
 
   .card-description > .social-list {
@@ -612,11 +840,6 @@ button {
   .text-footer {
     margin: 0 auto;
     text-align: left;
-  }
-
-  .text-footer,
-  .social-list {
-    margin-bottom: 72px;
   }
 }
 
@@ -644,9 +867,9 @@ button {
   }
 }
 
-/* ================480-767================ styles */
+/* ================428-767================ styles */
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 428px) and (max-width: 767px) {
   .page-header {
     padding-top: 24px;
     padding-bottom: 24px;
@@ -679,6 +902,10 @@ button {
     margin-bottom: 72px;
   }
 
+  .team-item {
+    margin: 0 auto;
+  }
+
   .team-list .team-item + .team-item {
     margin-top: 72px;
   }
@@ -693,6 +920,11 @@ button {
 
   .footer-general {
     text-align: center;
+  }
+
+  .text-footer,
+  .social-media-footer > .social-list {
+    margin-bottom: 72px;
   }
 
   .btn-subscribe {
@@ -728,6 +960,7 @@ button {
   .menu-link.current {
     color: var(--primary-brand-color);
   }
+
   .menu-link {
     display: block;
     padding-top: 24px;
@@ -769,7 +1002,8 @@ button {
 
   .section-hero {
     margin: 0 auto;
-    padding: 112px 0;
+    padding-top: 112px;
+    padding-bottom: 108px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -825,6 +1059,7 @@ button {
 
   .text-footer {
     width: 264px;
+    margin-bottom: 72px;
   }
 
   .form {
@@ -873,7 +1108,7 @@ button {
 }
 /* ================768-1199 styles================ */
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1158px) {
   .advantages-item {
     max-width: 356px;
   }
@@ -905,9 +1140,9 @@ button {
   }
 }
 
-/* ================1200-... styles================ */
+/* ================1158-... styles================ */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .section {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -956,7 +1191,7 @@ button {
 
   .section-hero {
     margin: 0 auto;
-    padding: 112px 0;
+    padding: 188px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
